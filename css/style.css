@@ -1,0 +1,125 @@
+*,
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.name {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  cursor: pointer;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 7px;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  font-size: 12px;
+}
+
+.imgPok {
+  width: 80px;
+  display: block;
+  pointer-events: none;
+}
+.displayPokemon {
+  height: 700px;
+  width: 700px;
+
+  padding: 10px;
+}
+.typeOfPokemon {
+  width: 500px;
+  height: 500px;
+  border: 1px solid black;
+}
+
+.listOfPokemons {
+  height: 700px;
+  overflow: auto;
+  width: 257px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.header {
+  margin: auto;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-shadow: 1px 1px 1px #000;
+  color: #fff;
+}
+.header p {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.divTypes {
+  display: flex;
+  flex-direction: row;
+}
+.type:not(:first-child) {
+  margin-left: 10px;
+}
+.type {
+  padding: 1px 10px 1px 10px;
+  border-radius: 8px;
+}
+
+.stats span,
+.description span {
+  font-weight: bold;
+}
+
+.description,
+.stat {
+  margin: 10px 0 10px 0;
+}
+.description {
+  text-align: justify;
+}
+.bar {
+  height: 25px;
+  width: 200px;
+  background-color: rgb(209, 204, 192);
+}
+.bar,
+.fillBar {
+  border-radius: 30px;
+}
+.fillBar {
+  height: inherit;
+  line-height: 1.9;
+  padding-left: 5px;
+  font-size: 13px;
+  color: white;
+}
+.divStats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.moves {
+  padding-top: 10px;
+  width: 200px;
+  border: 1px solid black;
+  margin-right: 50px;
+}
+.content {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
