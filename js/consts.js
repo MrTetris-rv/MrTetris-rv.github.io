@@ -6,6 +6,20 @@ const typesColors = {
     normal: '255, 209, 0',
     poison: '111, 30, 81',
     flying: '87, 88, 187',
+    special: '248, 165, 194',
+    status: '231, 127, 103',
+    physical: '120, 111, 166',
+    psychic: '161, 230, 195',
+    ghost: '164, 176, 190',
+    ground: '241, 144, 102',
+    dragon: '235, 47, 6',
+    fairy: '214, 162, 232',
+    fighting: '189, 197, 129',
+    dark: '52, 31, 151',
+    electric: '252, 66, 123',
+    rock: '44, 58, 71',
+    steel: '202, 211, 200',
+    ice: '178, 224, 237'
 }
 const backgroundColors = {
     grass: 'rgb(26, 188, 156)',
@@ -23,6 +37,7 @@ const statsColors = {
     'special-defense': 'rgb(64, 64, 122)',
     'speed': 'rgb(52, 172, 224)'
 }
+
 export {
     typesColors,
     backgroundColors,

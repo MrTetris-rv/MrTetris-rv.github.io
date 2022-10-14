@@ -12,7 +12,7 @@ const pokemonInfo = (name, imageUrl, types) => {
         <p>${name}</p>
         <div class="divTypes">
         ${types.map(type => 
-            `<div style="background: rgb(${typesColors[type.type.name]}); "class="type">${type.type.name}</div>`
+            `<div style="background: rgb(${typesColors[type.type.name]}); "class="typeDesign">${type.type.name}</div>`
     ).join('')}
         </div>
     </div>`;
@@ -36,6 +36,19 @@ const pokemonStats = (stats) => {
     </div>`;
 };
 
+const pokemonAbilities = (abilities) => {
+    return `
+    <div class="abilityMainContainer">
+        <span> Abilities: </span>
+     <ul class="abilitiesContainer">
+        ${abilities.map(item => `
+      <li class="ability">
+        <p>${item.ability.name}</p>
+      </li>`).join('')}
+      </ul>
+    </div>`;
+};
+
 const pokemonCard = (name, imageUrl, types, url) => {
     let colorBg = types[0].type.name;
     return `
@@ -50,14 +63,42 @@ const pokemonDescription = (descr) => {
     <div class="description">
         <span>Description: </span> ${descr}
     </div>
-  
     `
 };
+
+const pokemonMoves = (moveInfo) => {
+    return `
+    <span class="movesTitle">Moves:</span>
+    ${moveInfo.map(move => 
+        `<div class="move">
+             <div class="moveName">
+                <div class="titleBold">${move.itemName.move.name[0].toUpperCase() + move.itemName.move.name.slice(1)}</div>
+                <div class="typesList">
+                    <div class="typeDesign" style="background: rgb(${typesColors[move.type]});" >${move.type}</div>
+                    <div class="typeDesign" style="background: rgb(${typesColors[move.damageClass]});" >${move.damageClass}</div>
+                </div>
+                
+        </div>
+
+            <div class="moveInfoBox">
+                <div class="moveType">PP: ${move.pp === null ? move.pp = 0 : move.pp}</div>
+                 <div class="moveType">Power: ${move.power === null ? move.power = 0 : move.power}</div>
+                 <div class="moveType">Accurancy: ${move.accuracy === null ? move.accuracy = 0 : move.accuracy}</div>
+             </div>
+        </div>
+        `
+    ).join('')}
+    
+    </div>
+    `
+}
 
 
 export {
     pokemonInfo,
     pokemonStats,
     pokemonCard,
-    pokemonDescription
+    pokemonDescription,
+    pokemonMoves,
+    pokemonAbilities
 };

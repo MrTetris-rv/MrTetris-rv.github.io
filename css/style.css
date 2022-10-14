@@ -34,23 +34,20 @@ html {
   pointer-events: none;
 }
 .displayPokemon {
-  height: 700px;
-  width: 700px;
-
-  padding: 10px;
-}
-.typeOfPokemon {
-  width: 500px;
-  height: 500px;
-  border: 1px solid black;
+  width: 650px;
+  padding: 0 10px;
 }
 
+.moves,
 .listOfPokemons {
-  height: 700px;
+  height: 100vh;
+}
+.listOfPokemons {
   overflow: auto;
   width: 257px;
   display: flex;
   flex-wrap: wrap;
+  min-width: 120px;
 }
 .header {
   margin: auto;
@@ -71,10 +68,10 @@ html {
   display: flex;
   flex-direction: row;
 }
-.type:not(:first-child) {
+.typeDesign:not(:first-child) {
   margin-left: 10px;
 }
-.type {
+.typeDesign {
   padding: 1px 10px 1px 10px;
   border-radius: 8px;
 }
@@ -113,13 +110,72 @@ html {
   justify-content: space-between;
 }
 .moves {
-  padding-top: 10px;
-  width: 200px;
-  border: 1px solid black;
-  margin-right: 50px;
+  width: 337px;
+  /* height: 700px; */
+  overflow: auto;
 }
 .content {
   display: flex;
   flex-direction: row;
   margin: auto;
+}
+.moves .movesTitle {
+  background: orange;
+  display: block;
+  padding: 10px 0px 10px 0;
+  font-size: 20px;
+  text-shadow: 2px 1px 1px #000;
+  color: #fff;
+}
+.move {
+  margin: 10px 0 10px 0;
+  height: 60px;
+  border-bottom: 2px solid orange;
+  border-radius: 9px;
+  display: flex;
+  justify-content: space-between;
+}
+.move .titleBold {
+  font-weight: bold;
+}
+.moveType {
+  margin-right: 5px;
+  font-size: 14px;
+}
+.moveInfoBox {
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+}
+.typesList {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+  text-shadow: 1.5px 1px 1px rgba(0, 0, 0, 0.827);
+}
+.abilityMainContainer span {
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+}
+.abilitiesContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* list-style-type: disclosure-closed; */
+}
+.ability p {
+  color: black;
+  margin-right: 20px;
+  border-radius: 8px;
+}
+.ability {
+  color: rgb(238, 82, 83);
+  margin-left: 20px;
+}
+@media (max-width: 1280px) {
+  .listOfPokemons {
+    width: 128.5px;
+  }
 }

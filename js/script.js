@@ -9,7 +9,7 @@ import {
 } from './templates.js'
 import {
     showPokemon
-} from './listeners.js'
+} from './actions.js'
 
 
 async function getNameAndId(arr) {
